@@ -2,7 +2,7 @@
 
 This project demonstrates key features using data endpoints enabled through ServiceNow, built on top of provided boilerplates. The focus is on creating a course subscription platform with drag-and-drop capabilities.
 
-- Link: [https://chepark.github.io/coursehub-deploy/](https://chepark.github.io/coursehub-deploy/)
+- Link: [https://chepark.github.io/e-learning/](https://chepark.github.io/e-learning/)
 
 # Features
 
