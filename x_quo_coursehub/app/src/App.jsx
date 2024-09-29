@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import MyCoursePage from "./pages/MyCoursePage";
+import { UIDataContextProvider } from "./context/UIDataContext";
 
 const queryClient = new QueryClient();
 
@@ -10,14 +11,16 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<HomePage />} />
-              <Route path="/mycourses" element={<MyCoursePage />} />
-            </Route>
-          </Routes>
-        </Router>
+        <UIDataContextProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<HomePage />} />
+                <Route path="/mycourses" element={<MyCoursePage />} />
+              </Route>
+            </Routes>
+          </Router>
+        </UIDataContextProvider>
       </QueryClientProvider>
     </>
   );

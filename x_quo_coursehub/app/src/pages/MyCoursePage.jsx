@@ -1,26 +1,35 @@
 import { LEARNER_ID } from "../apis/constant";
 import CourseCard from "../components/CourseCard";
+import LoadingSpinner from "../components/LoadingSpinner";
 import useSubscriptions from "../hooks/useSubscriptions";
 import StyledMyCoursePage from "./MyCoursePage.style";
 
 function MyCoursePage() {
-  const { data: mySubscriptions } = useSubscriptions(LEARNER_ID);
-  console.log("my", mySubscriptions);
+  const { data: mySubscriptions, isLoading } = useSubscriptions(LEARNER_ID);
+
+  const renderCourseCard = () => {
+    return mySubscriptions.length ? (
+      mySubscriptions?.map((subscription) => {
+        const course = {
+          title: subscription["course.title"],
+          description: subscription["course.description"],
+          duration: subscription["course.duration"],
+          sys_id: subscription["course.sys_id"],
+        };
+        return (
+          <CourseCard key={subscription["course.sys_id"]} course={course} />
+        );
+      })
+    ) : (
+      <p>No courses subscribed yet.</p>
+    );
+  };
+
   return (
     <StyledMyCoursePage>
       <h2>My courses</h2>
       <div className="cousehub__subscribe-courses">
-        {mySubscriptions?.map((subscription) => {
-          const course = {
-            description: subscription["course.description"],
-            title: subscription["course.title"],
-            duration: subscription["course.duration"],
-          };
-
-          return (
-            <CourseCard key={subscription["course.sys_id"]} course={course} />
-          );
-        })}
+        {isLoading ? <LoadingSpinner /> : renderCourseCard()}
       </div>
     </StyledMyCoursePage>
   );
