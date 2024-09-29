@@ -2,6 +2,8 @@
 
 This project demonstrates key features using data endpoints enabled through ServiceNow, built on top of provided boilerplates. The focus is on creating a course subscription platform with drag-and-drop capabilities.
 
+- Link: [https://chepark.github.io/coursehub-deploy/](https://chepark.github.io/coursehub-deploy/)
+
 # Features
 
 ## 1. Course List
@@ -97,6 +99,7 @@ Due to the time constraint, most tech stacks were chosen to promote the fast imp
 
 - Checked the requests and implementation. Added missing features.
 - Documented the project on README.md
+- Deploy the app on Github page
 
 # Challenges
 
