@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
-import { FaBasketShopping } from "react-icons/fa6";
 import StyledLayout from "./Layout.style";
+import ShoppingBasket from "./ShoppingBasket";
 
 function Layout() {
   return (
@@ -20,7 +20,7 @@ function Layout() {
                 </li>
               </ul>
             </nav>
-            <FaBasketShopping />
+            <ShoppingBasket />
           </div>
         </div>
       </header>

@@ -14,6 +14,8 @@ const StyledLayout = styled.div`
       max-width: 900px;
       width: 100%;
       margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 
@@ -26,12 +28,27 @@ const StyledLayout = styled.div`
     ul {
       list-style-type: none;
     }
+
+    .coursehub__shopping-basket {
+      height: 2rem;
+      width: 2rem;
+      border: 1px solid #a1a1a1;
+    }
   }
 
   main {
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  footer {
+    border-top: 1px solid #a1a1a1;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 3rem;
   }
 `;
 
