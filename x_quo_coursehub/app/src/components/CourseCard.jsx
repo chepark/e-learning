@@ -61,7 +61,7 @@ function CourseCard({ course }) {
     return true;
   };
 
-  const onMainPage = pathname === "/e-learning/" || pathname === "/e-learning/";
+  const onMainPage = pathname === "/e-learning/" || pathname === "/e-learning";
   const onMyCoursesPage = pathname === "/e-learning/mycourses";
 
   return (
