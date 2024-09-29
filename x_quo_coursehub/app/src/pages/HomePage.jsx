@@ -6,7 +6,6 @@ import StyledHomePage from "./HomePage.style";
 function HomePage() {
   const { data: courses, isFetching } = useCourses();
 
-  console.log(courses);
   return (
     <StyledHomePage>
       <h2>All courses</h2>

@@ -27,7 +27,7 @@ jobs:
         env:
           VITE_SERVICENOW_USERNAME: ${{ secrets.VITE_SERVICENOW_USERNAME }}
           VITE_SERVICENOW_PASSWORD: ${{ secrets.VITE_SERVICENOW_PASSWORD }}
-          VITE_SERVICENOW_INSTANCE: ${{ secrets.VITE_SERVICENOW_INSTANCE }}
+          VITE_SERVICENOW_INSTANCE: https://dev249171.service-now.com
           VITE_LEARNER_ID: ${{ secrets.VITE_LEARNER_ID }}
         run: npm run build
         working-directory: ./x_quo_coursehub/app
