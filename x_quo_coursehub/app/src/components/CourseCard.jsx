@@ -61,6 +61,9 @@ function CourseCard({ course }) {
     return true;
   };
 
+  const onMainPage = pathname === "/e-learning/" || pathname === "/e-learning/";
+  const onMyCoursesPage = pathname === "/e-learning/mycourses";
+
   return (
     <StyledCourseCard
       draggable={enableDrag(course)}
@@ -78,8 +81,8 @@ function CourseCard({ course }) {
           Duration: {formatDuration(course.duration)}
         </div>
       </div>
-      {pathname === "/e-learning" && renderSubscribeButton(course)}
-      {pathname === "/e-learning/mycourses" && renderUnsubscribeButton()}
+      {onMainPage && renderSubscribeButton(course)}
+      {onMyCoursesPage && renderUnsubscribeButton()}
     </StyledCourseCard>
   );
 }

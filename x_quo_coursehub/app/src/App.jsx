@@ -15,7 +15,7 @@ function App() {
           <Router>
             <Routes>
               <Route path="/e-learning" element={<Layout />}>
-                <Route path="" element={<HomePage />} />
+                <Route index element={<HomePage />} />
                 <Route path="mycourses" element={<MyCoursePage />} />
               </Route>
             </Routes>
