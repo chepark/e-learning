@@ -53,7 +53,10 @@ function CourseCard({ course }) {
    * Enable drag and drop functionality only on the home page and for courses that are not subscribed
    */
   const enableDrag = () => {
-    if (pathname === "/mycourses" || (pathname === "/" && subscribed))
+    if (
+      pathname === "/e-learning/mycourses" ||
+      (pathname === "/e-learning" && subscribed)
+    )
       return false;
     return true;
   };
@@ -75,8 +78,8 @@ function CourseCard({ course }) {
           Duration: {formatDuration(course.duration)}
         </div>
       </div>
-      {pathname === "/" && renderSubscribeButton(course)}
-      {pathname === "/mycourses" && renderUnsubscribeButton()}
+      {pathname === "/e-learning" && renderSubscribeButton(course)}
+      {pathname === "/e-learning/mycourses" && renderUnsubscribeButton()}
     </StyledCourseCard>
   );
 }

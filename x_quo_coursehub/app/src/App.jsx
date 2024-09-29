@@ -14,9 +14,9 @@ function App() {
         <UIDataContextProvider>
           <Router>
             <Routes>
-              <Route path="/" element={<Layout />}>
+              <Route path="/e-learning" element={<Layout />}>
                 <Route index element={<HomePage />} />
-                <Route path="/mycourses" element={<MyCoursePage />} />
+                <Route path="mycourses" element={<MyCoursePage />} />
               </Route>
             </Routes>
           </Router>

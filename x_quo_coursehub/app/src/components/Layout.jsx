@@ -8,7 +8,7 @@ function Layout() {
       <header>
         <div className="coursehub__header-container">
           <div className="coursehub__logo">
-            <Link to={"/"}>
+            <Link to={"/e-learning"}>
               <h1>CourseHub</h1>
             </Link>
           </div>
@@ -16,7 +16,7 @@ function Layout() {
             <nav>
               <ul>
                 <li>
-                  <Link to={"/mycourses"}>My Courses</Link>
+                  <Link to={"/e-learning/mycourses"}>My Courses</Link>
                 </li>
               </ul>
             </nav>

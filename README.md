@@ -48,7 +48,7 @@ Due to the time constraint, most tech stacks were chosen to promote the fast imp
 # Project folder and file structures
 
 ```
-.
+x_quo_coursehub
 └── app/
     ├── ...
     └── src/
