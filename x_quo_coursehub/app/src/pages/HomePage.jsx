@@ -4,7 +4,7 @@ import useCourses from "../hooks/useCourses";
 import StyledHomePage from "./HomePage.style";
 
 function HomePage() {
-  const { data: courses, isFetching } = useCourses();
+  const { data: courses, isFetching, isError } = useCourses();
 
   return (
     <StyledHomePage>
@@ -18,6 +18,7 @@ function HomePage() {
           ))}
         </div>
       )}
+      {isError && <div>Failed to fetch courses</div>}
     </StyledHomePage>
   );
 }

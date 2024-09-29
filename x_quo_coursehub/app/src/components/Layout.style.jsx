@@ -3,6 +3,7 @@ import styled from "styled-components";
 const StyledLayout = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 3rem;
 
   header {
     border-bottom: 1px solid #a1a1a1;

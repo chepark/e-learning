@@ -5,7 +5,11 @@ import useSubscriptions from "../hooks/useSubscriptions";
 import StyledMyCoursePage from "./MyCoursePage.style";
 
 function MyCoursePage() {
-  const { data: mySubscriptions, isLoading } = useSubscriptions(LEARNER_ID);
+  const {
+    data: mySubscriptions,
+    isLoading,
+    isError,
+  } = useSubscriptions(LEARNER_ID);
 
   const renderCourseCard = () => {
     return mySubscriptions.length ? (
@@ -30,6 +34,7 @@ function MyCoursePage() {
       <h2>My courses</h2>
       <div className="cousehub__subscribe-courses">
         {isLoading ? <LoadingSpinner /> : renderCourseCard()}
+        {isError && <div>Failed to fetch subscription.</div>}
       </div>
     </StyledMyCoursePage>
   );

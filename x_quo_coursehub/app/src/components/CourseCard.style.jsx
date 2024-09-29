@@ -33,8 +33,9 @@ const StyledCourseCard = styled.div`
   }
 
   .coursehub__course-duration {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     line-height: 1rem;
+    height: 20px;
   }
 
   .coursehub__subscribe-button--active,
