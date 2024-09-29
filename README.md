@@ -98,7 +98,7 @@ Due to the time constraint, most tech stacks were chosen to promote the fast imp
 - Checked the requests and implementation. Added missing features.
 - Documented the project on README.md
 
-# Chanllenges
+# Challenges
 
 ## Fetching fields in a referenced table
 
@@ -125,7 +125,7 @@ ServiceNow’s Table API returned the duration data as a date string (`YYYY-MM-D
 Go to /app directory and install packages
 
 ```
-npm run install
+npm install
 ```
 
 Run the project
